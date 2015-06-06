@@ -58,6 +58,7 @@ public class Setting implements Entity {
     public static final String SETTING_GLOBAL_ITEM_UNREAD_COUNT = "globalItemUnreadCount";
     public static final String SETTING_BROWSER_CHOICE = "browserChoice";
     public static final String SETTING_VOLUMN_KEY_SWITCHING = "volumnKeySwitching";
+    public static final String SETTING_SPLIT_BY_HOUR = "splitByHour";
 
     public static Setting fromCursor(final Cursor cur) {
         return new Setting(Utils.getStringFromCursor(cur, Setting._NAME),

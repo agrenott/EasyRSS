@@ -27,6 +27,7 @@ import org.freshrss.easyrss.data.readersetting.SettingImmediateStateSyncing;
 import org.freshrss.easyrss.data.readersetting.SettingMarkAllAsReadConfirmation;
 import org.freshrss.easyrss.data.readersetting.SettingMaxItems;
 import org.freshrss.easyrss.data.readersetting.SettingNotificationOn;
+import org.freshrss.easyrss.data.readersetting.SettingSplitByHour;
 import org.freshrss.easyrss.data.readersetting.SettingSyncInterval;
 import org.freshrss.easyrss.data.readersetting.SettingSyncMethod;
 import org.freshrss.easyrss.data.readersetting.SettingTheme;
@@ -72,6 +73,7 @@ public class SettingsViewCtrl extends AbsViewCtrl implements OnSettingUpdatedLis
         showSettingAboutEasyRSS();
         showSettingAboutAuthor();
         showSettingBrowserChoice();
+        showSettingSplitByHour();
 
         final View btnCal = view.findViewById(R.id.BtnCalculation);
         btnCal.setOnClickListener(new OnClickListener() {
@@ -704,4 +706,19 @@ public class SettingsViewCtrl extends AbsViewCtrl implements OnSettingUpdatedLis
             }
         });
     }
+
+    private void showSettingSplitByHour() {
+        final ImageView img = (ImageView) view.findViewById(R.id.SwitchSplitByHour);
+        final SettingSplitByHour sSplit = new SettingSplitByHour(dataMgr);
+        img.setImageResource(sSplit.getData() ? R.drawable.switch_on : R.drawable.switch_off);
+        img.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                sSplit.setData(dataMgr, !sSplit.getData());
+                dataMgr.updateSetting(sSplit.toSetting());
+                showSettingSplitByHour();
+            }
+        });
+    }
+
 }

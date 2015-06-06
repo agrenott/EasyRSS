@@ -68,6 +68,8 @@
     <string name="TxtSettingThemeIntro">Change the theme of EasyRSS.</string>
     <string name="TxtSettingMarkAllAsReadConfirmation">Mark all as read confirmation</string>
     <string name="TxtSettingMarkAllAsReadConfirmationIntro">Whether to show a confirmation popup before marking all items as read.</string>
+    <string name="TxtSettingSplitByHour">Split by hour</string>
+    <string name="TxtSettingSplitByHourIntro">Split articles by hour for the latest 3 days. Only split by days otherwise.</string>
     <string name="TxtSettingVolumnKeySwitching">Volumn key switching</string>
     <string name="TxtSettingVolumnKeySwitchingIntro">Whether to use volumn key to switch between items.</string>
     <string name="TxtSettingSyncInterval">Sync interval</string>

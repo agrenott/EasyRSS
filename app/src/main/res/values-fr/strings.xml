@@ -68,6 +68,8 @@
 	<string name="TxtSettingThemeIntro">Définit le thème graphique de EasyRSS.</string>
 	<string name="TxtSettingMarkAllAsReadConfirmation">Confirmer marquer tout comme lu</string>
 	<string name="TxtSettingMarkAllAsReadConfirmationIntro">Définit s’il faut demander confirmation avant de marquer tous les articles comme lus.</string>
+	<string name="TxtSettingSplitByHour">Répartir par heure</string>
+	<string name="TxtSettingSplitByHourIntro">Répartir les articles par heure pour les 3 derniers jours. Répartir uniquement par jour sinon.</string>
 	<string name="TxtSettingVolumnKeySwitching">Navigation par touches de volume</string>
 	<string name="TxtSettingVolumnKeySwitchingIntro">Définit si les touches physiques de volume peuvent être utilisés pour la navigation entre les articles.</string>
 	<string name="TxtSettingSyncInterval">Fréquence de synchronisation</string>

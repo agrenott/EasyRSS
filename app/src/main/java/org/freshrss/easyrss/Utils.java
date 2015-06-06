@@ -98,16 +98,17 @@ final public class Utils {
         return new Date(timestamp / 1000);
     }
 
-    public static String timestampToTimeAgo(final Context context, final long timestamp) {
+    public static String timestampToTimeAgo(final Context context, final long timestamp, final boolean splitByHour) {
         final Date date = timestampToDate(timestamp);
         final long delta = new Date().getTime() - date.getTime();
-        if (delta < 60 * 60 * 1000) {
-            return context.getString(R.string.TxtLessThanOneHourAgo);
-        } else if (delta < 40 * 60 * 60 * 1000) {
-            return context.getString(R.string.TxtHoursAgo, delta / (60 * 60 * 1000) + 1);
-        } else {
-            return context.getString(R.string.TxtDaysAgo, delta / (24 * 60 * 60 * 1000) + 1);
+        if (splitByHour) {
+            if (delta < 60 * 60 * 1000) {
+                return context.getString(R.string.TxtLessThanOneHourAgo);
+            } else if (delta < 40 * 60 * 60 * 1000) {
+                return context.getString(R.string.TxtHoursAgo, delta / (60 * 60 * 1000) + 1);
+            }
         }
+        return context.getString(R.string.TxtDaysAgo, delta / (24 * 60 * 60 * 1000) + 1);
     }
 
     public static boolean toBoolean(final int x) {

@@ -15,7 +15,6 @@ import java.net.URLEncoder;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.freshrss.easyrss.R;
 import org.freshrss.easyrss.data.DataMgr;
 import org.freshrss.easyrss.data.DataUtils;
 import org.freshrss.easyrss.data.Item;
@@ -24,6 +23,7 @@ import org.freshrss.easyrss.data.Tag;
 import org.freshrss.easyrss.data.readersetting.SettingDescendingItemsOrdering;
 import org.freshrss.easyrss.data.readersetting.SettingFontSize;
 import org.freshrss.easyrss.data.readersetting.SettingMarkAllAsReadConfirmation;
+import org.freshrss.easyrss.data.readersetting.SettingSplitByHour;
 import org.freshrss.easyrss.data.readersetting.SettingSyncMethod;
 import org.freshrss.easyrss.listadapter.AbsListItem;
 import org.freshrss.easyrss.listadapter.ListAdapter;
@@ -432,7 +432,7 @@ public class FeedViewCtrl extends AbsViewCtrl implements ItemListWrapperListener
             final Item item = Item.fromCursor(cur);
             count++;
             lastTimestamp = item.getTimestamp();
-            final String curDateString = Utils.timestampToTimeAgo(context, item.getTimestamp());
+            final String curDateString = Utils.timestampToTimeAgo(context, item.getTimestamp(), new SettingSplitByHour(dataMgr).getData());
             if (!curDateString.equals(lastDateString)) {
                 String s;
                 switch (viewType) {

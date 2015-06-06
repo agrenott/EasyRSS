@@ -780,6 +780,48 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/SettingSplitByHour"
+                    style="@style/ListItemBackgroundNormal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="14dip"
+                    android:paddingTop="10dip" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/TextColorNormal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/TxtSettingSplitByHour"
+                            android:textSize="16dip" >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/TxtSettingSplitByHourIntro"
+                            android:textColor="#999"
+                            android:textSize="12dip" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/SwitchSplitByHour"
+                        android:layout_width="52dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="14dip"
+                        android:layout_marginRight="14dip" >
+                    </ImageView>
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
