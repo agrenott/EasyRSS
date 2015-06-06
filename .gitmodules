@@ -1,0 +1,3 @@
+[submodule "libs/HtmlCleaner"]
+	path = libs/HtmlCleaner
+	url = https://github.com/davidsun/HtmlCleaner.git

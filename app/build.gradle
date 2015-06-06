@@ -1,0 +1,23 @@
+    apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "org.freshrss.easyrss"
+        minSdkVersion 7
+        targetSdkVersion 17
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.fasterxml.jackson.core:jackson-core:2.4.2'
+}
